@@ -7,9 +7,19 @@ input = sys.argv[1]
 #Remove spaces and capitalize all letters
 input = input.replace(" ", "").upper()
 
-results = itertools.permutations(input, len(input))
+#Create array of tuples
+tupleResults = itertools.permutations(input, len(input))
 
-print(results)
+#Create array of strings and alphabetize
+stringResults = []
 
-for result in results:
-    print("".join(result))
+for result in tupleResults:
+    stringResults.append("".join(result))
+
+stringResults.sort()
+
+#Print all results
+for result in stringResults:
+    print(result, end="  |  ")
+
+print("")
