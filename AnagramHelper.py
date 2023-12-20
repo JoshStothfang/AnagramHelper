@@ -7,15 +7,9 @@ input = sys.argv[1]
 #Remove spaces and capitalize all letters
 input = input.replace(" ", "").upper()
 
-#Create list of characters
-inputChars = [char for char in input]
+results = itertools.permutations(input, len(input))
 
-#Create Counter of characters
-counter = Counter(inputChars)
-
-print(counter)
-
-results = itertools.permutations(inputChars, 3)
+print(results)
 
 for result in results:
-    print(result)
+    print("".join(result))
