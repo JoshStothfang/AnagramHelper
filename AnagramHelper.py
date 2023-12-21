@@ -23,10 +23,11 @@ counter = 0
 
 for result in stringResults:
     if counter != 9:
-        print(result, end="  |  ")
+        print(result, end=" " * 4)
         counter += 1
     else:
         print(result)
         counter = 0
+        print("")
 
 print("")
