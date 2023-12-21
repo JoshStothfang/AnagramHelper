@@ -19,7 +19,14 @@ for result in tupleResults:
 stringResults.sort()
 
 #Print all results
+counter = 0
+
 for result in stringResults:
-    print(result, end="  |  ")
+    if counter != 9:
+        print(result, end="  |  ")
+        counter += 1
+    else:
+        print(result)
+        counter = 0
 
 print("")
